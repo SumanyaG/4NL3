@@ -3,9 +3,11 @@
 The following files are included in the submission of this assignment:
 - **myfile.txt**: UTF-8 encoded input file
 - **normalize_text.py**: a python script to tokenize, normalize and visualize the data
-- **report.pdf**: PDF file containing detailed descriptions for each step
+- **report.pdf**: rendered PDF file containing detailed descriptions for each step
 - **bar_plot.png**: Token Frequency Distribution as a bar plot with y-axis set as log scale
 - **line_plot.png**: Token Frequency Ditribution as a line plot on a log-log scale
+- **Makefile**: Makefile to convert LaTeX code to as a PDF
+- **report.tex**: LaTeX code for the report
 
 The script can be executed using the command: `$ python normalize_text.py myfile.txt (<your-options>)`. (<your-options>) can be replaced using any combination of the following options:
 1. lowercasing as `--lowercase`
