@@ -1,1 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/axpepi8Q)
+4NL3 Winter 2025 - Assignment 1
+
+The following files are included in the submission of this assignment:
+- **myfile.txt**: UTF-8 encoded input file
+- **normalize_text.py**: a python script to tokenize, normalize and visualize the data
+- **report.pdf**: PDF file containing detailed descriptions for each step
+- **bar_plot.png**: Token Frequency Distribution as a bar plot with y-axis set as log scale
+- **line_plot.png**: Token Frequency Ditribution as a line plot on a log-log scale
+
+The script can be executed using the command: `$ python normalize_text.py myfile.txt (<your-options>)`. (<your-options>) can be replaced using any combination of the following options:
+1. lowercasing as `--lowercase`
+2. stemming as `--stem`
+3. lemmatization as `--lemmatization`
+4. removal of stopwords as `--remove-stopwords`
+5. removal of numbers as `--remove-numbers`

@@ -4,6 +4,10 @@ from collections import Counter
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+import re
+import matplotlib.pyplot as plt
+import pandas as pd
+from IPython.display import display
 
 def tokenize_text(text):
     text = text[1:] if text.startswith('\ufeff') else text #Remove BOM characters appearing in text
@@ -12,7 +16,7 @@ def tokenize_text(text):
 
     return tokens
 
-def normalize_tokens(tokens, lowercase=False, stem=False, lemmatize=False, remove_stopwords=False):
+def normalize_tokens(tokens, lowercase=False, stem=False, lemmatize=False, remove_stopwords=False, remove_numbers=False):
     processed_tokens = tokens
 
     if lowercase:
@@ -29,8 +33,34 @@ def normalize_tokens(tokens, lowercase=False, stem=False, lemmatize=False, remov
     if lemmatize:
         lemmatizer = WordNetLemmatizer()
         processed_tokens = [lemmatizer.lemmatize(token) for token in tokens]
+
+    if remove_numbers:
+        processed_tokens = re.sub(r'\d+', '', tokens)
     
     return processed_tokens
+
+def visualize(word_counts, output_file='token_distribution.png'):
+    df = pd.DataFrame(list(word_counts.items()), columns=['Tokens', 'Count'])
+    df['Rank'] = range(1, len(df) + 1)
+
+    display(df)
+
+    plt.figure(figsize=(12,6))
+    #ax = df.head(25).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
+    plt.loglog(df['Rank'], df['Count'])
+    plt.title('Token Frequency Distribution')
+    plt.xlabel('Rank')
+    plt.ylabel('Frequency')
+    plt.xticks(rotation=45)
+
+    plt.tight_layout()
+
+    #ax.set_yscale('log')
+    plt.grid(True)
+    #plt.savefig(output_file)
+    #plt.close()
+    plt.show()
+
 
 def main():
     parser = argparse.ArgumentParser(description='Normalize text and count tokens')
@@ -39,6 +69,7 @@ def main():
     parser.add_argument('--stem', action='store_true', help='Apply stemming')
     parser.add_argument('--lemmatize', action='store_true', help='Apply lemmatization')
     parser.add_argument('--remove-stopwords', action='store_true', help='Remove stopwords')
+    parser.add_argument('--remove-numbers', action='store_true', help='Remove numbers')
 
     args = parser.parse_args()
 
@@ -55,9 +86,11 @@ def main():
     print(f"\nFinal Results: ")
     print(f"Total tokens: {len(normalized)}")
     print(f"Unique tokens: {len(sorted_counts)}")
-    print("\nTop 50 tokens:")
-    for word, count in list(sorted_counts.items())[:50]:
+    print("\nTokens:")
+    for word, count in list(sorted_counts.items())[-150:-100]:
         print(f"{word}: {count}")
+
+    visualize(sorted_counts)
 
 if __name__ == "__main__":
     main()
