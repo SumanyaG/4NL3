@@ -1,4 +1,4 @@
-4NL3 Winter 2025 - Assignment 1
+<h1>4NL3 Winter 2025 - Assignment 1</h1>
 
 The following files are included in the submission of this assignment:
 - **myfile.txt**: UTF-8 encoded input file
