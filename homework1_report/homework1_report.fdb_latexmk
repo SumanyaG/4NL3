@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1737435257.75979 "/Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex" "homework1_report.pdf" "homework1_report" 1737435258.18809 0
-  "/Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex" 1737435257.54273 9699 33a5bfe8febf1e8fc46b8fc54a4845f0 ""
+["pdflatex"] 1737435504.26133 "/Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex" "homework1_report.pdf" "homework1_report" 1737435504.70596 0
+  "/Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex" 1737435503.60238 10395 e0fdbeab36fc480e49683fb7e3247aea ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -78,12 +78,12 @@
   "figures/df_top25_stopwords.png" 1737434148.22224 41895 2a0f2177c4ca2d922d03f493d651a771 ""
   "figures/line_plot.png" 1737434513.78718 31274 84c4fbdfe6596a91b5561106610e58ac ""
   "figures/line_plot_stopwords.png" 1737434525.96392 34671 c53f8bcaf6bfff21c1b0afe27f69006f ""
-  "homework1_report.aux" 1737435258.14864 3245 6c7ea09d03f25ea98ddf156e006cab6f "pdflatex"
-  "homework1_report.lof" 1737435258.14959 970 7d60978b0bb824c2ca3a3552bb677138 "pdflatex"
-  "homework1_report.lot" 1737435257.95365 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "homework1_report.out" 1737435258.14936 894 29e2d618f6fedbbbe063b49c0410993d "pdflatex"
-  "homework1_report.tex" 1737435257.54273 9699 33a5bfe8febf1e8fc46b8fc54a4845f0 ""
-  "homework1_report.toc" 1737435258.14955 633 04fe1be19ca403757a8972b8ef100090 "pdflatex"
+  "homework1_report.aux" 1737435504.66485 3246 93b3c4ebcc2ffed6b4e7fb471228e82b "pdflatex"
+  "homework1_report.lof" 1737435504.66586 970 7790fd16aa09854584b50512990db5dd "pdflatex"
+  "homework1_report.lot" 1737435504.42792 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "homework1_report.out" 1737435504.6656 894 29e2d618f6fedbbbe063b49c0410993d "pdflatex"
+  "homework1_report.tex" 1737435503.60238 10395 e0fdbeab36fc480e49683fb7e3247aea ""
+  "homework1_report.toc" 1737435504.66583 634 6b59aa4ac4d1e46ef73a203a979b5f5c "pdflatex"
   (generated)
   "homework1_report.aux"
   "homework1_report.lof"
