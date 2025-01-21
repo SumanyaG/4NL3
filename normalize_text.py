@@ -6,9 +6,10 @@ import re
 import matplotlib.pyplot as plt
 import pandas as pd
 from IPython.display import display
+import dataframe_image as dfi
 
 def tokenize_text(text):
-    text = text[1:] if text.startswith('\ufeff') else text #Remove BOM characters appearing in text
+    text = text[1:] if text.startswith('\ufeff') else text # Remove BOM characters appearing in text
     pattern = r"[A-Za-z]+(?:[''][A-Za-z]+)*|\d+|[A-Za-z]+|[^\w\s]"
     tokens = re.findall(pattern, text)
     tokens = [token for token in tokens if any(c.isalnum() for c in token)]
@@ -47,12 +48,15 @@ def count_tokens(tokens):
 
 def visualize(word_counts, output_file='token_distribution.png'):
     df = pd.DataFrame(list(word_counts.items()), columns=['Tokens', 'Count'])
-    df['Rank'] = range(1, len(df) + 1)
+    df['Rank'] = range(1, len(df) + 1) # To display a table of all values using a DataFrame
 
     display(df)
+    df_first_25 = df.head(25)
+    df_last_25 = df.tail(25)
+    #dfi.export(df_last_25, 'df_last25.png')
 
     plt.figure(figsize=(12,6))
-    ax = df.head(25).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
+    ax = df.head(45).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
     #plt.loglog(df['Rank'], df['Count'])
     plt.title('Token Frequency Distribution')
     plt.xlabel('Rank')
@@ -63,9 +67,9 @@ def visualize(word_counts, output_file='token_distribution.png'):
 
     ax.set_yscale('log')
     plt.grid(True)
-    #plt.savefig(output_file)
-    #plt.close()
-    plt.show()
+    plt.savefig(output_file)
+    plt.close()
+    #plt.show()
 
 def parse_args():
     args = {
@@ -121,7 +125,7 @@ def main():
     print(f"Total tokens: {len(normalized)}")
     print(f"Unique tokens: {len(sorted_counts)}")
     print("\nTokens:")
-    for word, count in list(sorted_counts.items())[-150:-100]:
+    for word, count in list(sorted_counts.items())[:35]:
         print(f"{word}: {count}")
 
     visualize(sorted_counts)
