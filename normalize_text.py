@@ -1,7 +1,5 @@
-import argparse
 import nltk
-from collections import Counter
-from nltk.tokenize import word_tokenize
+import sys
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 import re
@@ -11,13 +9,14 @@ from IPython.display import display
 
 def tokenize_text(text):
     text = text[1:] if text.startswith('\ufeff') else text #Remove BOM characters appearing in text
-    tokens = word_tokenize(text)
+    pattern = r"[A-Za-z]+(?:[''][A-Za-z]+)*|\d+|[A-Za-z]+|[^\w\s]"
+    tokens = re.findall(pattern, text)
     tokens = [token for token in tokens if any(c.isalnum() for c in token)]
 
     return tokens
 
 def normalize_tokens(tokens, lowercase=False, stem=False, lemmatize=False, remove_stopwords=False, remove_numbers=False):
-    processed_tokens = tokens
+    processed_tokens = tokens[:]
 
     if lowercase:
         processed_tokens = [token.lower() for token in processed_tokens]
@@ -35,9 +34,16 @@ def normalize_tokens(tokens, lowercase=False, stem=False, lemmatize=False, remov
         processed_tokens = [lemmatizer.lemmatize(token) for token in tokens]
 
     if remove_numbers:
-        processed_tokens = re.sub(r'\d+', '', tokens)
+        processed_tokens = [token for token in processed_tokens if not re.match(r'^\d+$', token)]
     
     return processed_tokens
+
+def count_tokens(tokens):
+    counts = {}
+    for token in tokens:
+        counts[token] = counts.get(token, 0) + 1
+    
+    return dict(sorted(counts.items(), key=lambda x: x[1], reverse=True))
 
 def visualize(word_counts, output_file='token_distribution.png'):
     df = pd.DataFrame(list(word_counts.items()), columns=['Tokens', 'Count'])
@@ -46,8 +52,8 @@ def visualize(word_counts, output_file='token_distribution.png'):
     display(df)
 
     plt.figure(figsize=(12,6))
-    #ax = df.head(25).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
-    plt.loglog(df['Rank'], df['Count'])
+    ax = df.head(25).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
+    #plt.loglog(df['Rank'], df['Count'])
     plt.title('Token Frequency Distribution')
     plt.xlabel('Rank')
     plt.ylabel('Frequency')
@@ -55,35 +61,63 @@ def visualize(word_counts, output_file='token_distribution.png'):
 
     plt.tight_layout()
 
-    #ax.set_yscale('log')
+    ax.set_yscale('log')
     plt.grid(True)
     #plt.savefig(output_file)
     #plt.close()
     plt.show()
 
+def parse_args():
+    args = {
+        'input_file': None,
+        'lowercase': False,
+        'stem': False,
+        'lemmatize': False,
+        'remove_stopwords': False,
+        'remove_numbers': False
+    }
+
+    if len(sys.argv) < 2:
+        print("To use, type: python normalization.py myfile.txt [--lowercase] [--stem] [--lemmatize] [--remove-stopwords] [--remove-numbers]")
+        sys.exit(1)
+    
+    args['input_file'] = sys.argv[1]
+
+    flags = sys.argv[2:] if len(sys.argv) > 2 else []
+    args['lowercase'] = '--lowercase' in flags
+    args['stem'] = '--stem' in flags
+    args['lemmatize'] = '--lemmatize' in flags
+    args['remove_stopwords'] = '--remove-stopwords' in flags
+    args['remove_numbers'] = '--remove-numbers' in flags
+
+    return args
 
 def main():
-    parser = argparse.ArgumentParser(description='Normalize text and count tokens')
-    parser.add_argument('input_file', help='Input text file')
-    parser.add_argument('--lowercase', action='store_true', help='Covert text to lowercase')
-    parser.add_argument('--stem', action='store_true', help='Apply stemming')
-    parser.add_argument('--lemmatize', action='store_true', help='Apply lemmatization')
-    parser.add_argument('--remove-stopwords', action='store_true', help='Remove stopwords')
-    parser.add_argument('--remove-numbers', action='store_true', help='Remove numbers')
+    args = parse_args()
 
-    args = parser.parse_args()
-
-    with open(args.input_file, 'r', encoding='utf-8') as f:
-        text = f.read()
-
+    try:
+        with open(args['input_file'], 'r', encoding='utf-8') as f:
+            text = f.read()
+    except FileNotFoundError:
+        print(f"Error: Could not find file {args['input_file']}")
+        sys.exit(1)
+    
     tokens = tokenize_text(text)
-    normalized = normalize_tokens(tokens, lowercase=args.lowercase, stem=args.stem, lemmatize=args.lemmatize, remove_stopwords=args.remove_stopwords)
+    print(f"\nAfter tokenization: ")
+    print(f"Total tokens: {len(tokens)}")
 
-    word_counts = Counter(normalized)
+    normalized = normalize_tokens(
+        tokens,
+        lowercase=args['lowercase'],
+        stem=args['stem'],
+        lemmatize=args['lemmatize'],
+        remove_stopwords=args['remove_stopwords'],
+        remove_numbers=args['remove_numbers']
+    )
 
-    sorted_counts = dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True))
+    sorted_counts = count_tokens(normalized)
 
-    print(f"\nFinal Results: ")
+    print(f"\nAfter normalization: ")
     print(f"Total tokens: {len(normalized)}")
     print(f"Unique tokens: {len(sorted_counts)}")
     print("\nTokens:")
