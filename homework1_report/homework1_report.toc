@@ -3,6 +3,7 @@
 \contentsline {subsection}{\numberline {2.1}Approach}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Available Options}{2}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Sample Output}{3}{section.3}%
-\contentsline {section}{\numberline {4}Discussion}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Findings}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Reflection}{7}{subsection.4.2}%
+\contentsline {section}{\numberline {4}Discussion}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Findings}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Reflection}{9}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Appendix}{9}{section.5}%

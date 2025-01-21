@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.12)  20 JAN 2025 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.12)  20 JAN 2025 23:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -328,79 +328,138 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
 
-<figures/df_top25.png, id=81, 196.735pt x 812.03375pt>
+<figures/df_top25.png, id=97, 224.84pt x 812.03375pt>
 File: figures/df_top25.png Graphic file (type png)
 <use figures/df_top25.png>
-Package pdftex.def Info: figures/df_top25.png  used on input line 104.
-(pdftex.def)             Requested size: 135.13281pt x 557.76382pt.
+Package pdftex.def Info: figures/df_top25.png  used on input line 106.
+(pdftex.def)             Requested size: 135.13281pt x 488.06657pt.
 
 
 [3]
-<figures/df_last25.png, id=89, 240.9pt x 812.03375pt>
-File: figures/df_last25.png Graphic file (type png)
-<use figures/df_last25.png>
-Package pdftex.def Info: figures/df_last25.png  used on input line 114.
-(pdftex.def)             Requested size: 175.17244pt x 590.48744pt.
+<figures/df_top25_stopwords.png, id=104, 224.84pt x 812.03375pt>
+File: figures/df_top25_stopwords.png Graphic file (type png)
+<use figures/df_top25_stopwords.png>
+Package pdftex.def Info: figures/df_top25_stopwords.png  used on input line 113.
+(pdftex.def)             Requested size: 135.13281pt x 488.06657pt.
 
 
 [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.118 
+l.117 
        <./figures/df_top25.png (PNG copy)>]
+<figures/df_last25.png, id=113, 244.915pt x 812.03375pt>
+File: figures/df_last25.png Graphic file (type png)
+<use figures/df_last25.png>
+Package pdftex.def Info: figures/df_last25.png  used on input line 125.
+(pdftex.def)             Requested size: 175.17244pt x 580.81038pt.
+
 
 [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.123 
-       <./figures/df_last25.png (PNG copy)>]
-<figures/bar_plot.png, id=99, 867.24pt x 433.62pt>
-File: figures/bar_plot.png Graphic file (type png)
-<use figures/bar_plot.png>
-Package pdftex.def Info: figures/bar_plot.png  used on input line 125.
-(pdftex.def)             Requested size: 500.484pt x 250.24265pt.
-<figures/line_plot.png, id=102, 867.24pt x 433.62pt>
-File: figures/line_plot.png Graphic file (type png)
-<use figures/line_plot.png>
-Package pdftex.def Info: figures/line_plot.png  used on input line 135.
-(pdftex.def)             Requested size: 500.484pt x 250.24265pt.
+l.129 
+       <./figures/df_top25_stopwords.png (PNG copy)>]
+<figures/df_last25_stopwords.png, id=118, 240.9pt x 812.03375pt>
+File: figures/df_last25_stopwords.png Graphic file (type png)
+<use figures/df_last25_stopwords.png>
+Package pdftex.def Info: figures/df_last25_stopwords.png  used on input line 132.
+(pdftex.def)             Requested size: 175.17244pt x 590.48744pt.
 
 
 [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.139 
-       <./figures/bar_plot.png>]
+l.136 
+       <./figures/df_last25.png (PNG copy)>]
 
 [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.144 \end{document}
-                     <./figures/line_plot.png>] (./homework1_report.aux)
+l.142 
+       <./figures/df_last25_stopwords.png (PNG copy)>]
+<figures/bar_plot.png, id=129, 867.24pt x 433.62pt>
+File: figures/bar_plot.png Graphic file (type png)
+<use figures/bar_plot.png>
+Package pdftex.def Info: figures/bar_plot.png  used on input line 144.
+(pdftex.def)             Requested size: 500.484pt x 250.24265pt.
+<figures/line_plot.png, id=132, 867.24pt x 433.62pt>
+File: figures/line_plot.png Graphic file (type png)
+<use figures/line_plot.png>
+Package pdftex.def Info: figures/line_plot.png  used on input line 155.
+(pdftex.def)             Requested size: 500.484pt x 250.24265pt.
+
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.159 
+       <./figures/bar_plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 163--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--174
+
+ []
+
+<figures/bar_plot_stopwords.png, id=146, 867.24pt x 433.62pt>
+File: figures/bar_plot_stopwords.png Graphic file (type png)
+<use figures/bar_plot_stopwords.png>
+Package pdftex.def Info: figures/bar_plot_stopwords.png  used on input line 186.
+(pdftex.def)             Requested size: 500.484pt x 250.24265pt.
+
+
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.190 
+       <./figures/line_plot.png>]
+<figures/line_plot_stopwords.png, id=153, 867.24pt x 433.62pt>
+File: figures/line_plot_stopwords.png Graphic file (type png)
+<use figures/line_plot_stopwords.png>
+Package pdftex.def Info: figures/line_plot_stopwords.png  used on input line 193.
+(pdftex.def)             Requested size: 500.484pt x 250.24265pt.
+
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.199 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.199 \end{document}
+                     <./figures/bar_plot_stopwords.png> <./figures/line_plot_stopwords.png>] (./homework1_report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `homework1_report.out' has not changed.
-(rerunfilecheck)             Checksum: 2E6595818BFE83F993633EEEF1CF3B8D;811.
+(rerunfilecheck)             Checksum: 29E2D618F6FEDBBBE063B49C0410993D;894.
  ) 
 Here is how much of TeX's memory you used:
- 9092 strings out of 474669
- 142744 string characters out of 5751131
- 547211 words of memory out of 5000000
- 32009 multiletter control sequences out of 15000+600000
+ 9133 strings out of 474669
+ 143931 string characters out of 5751131
+ 547561 words of memory out of 5000000
+ 32042 multiletter control sequences out of 15000+600000
  563606 words of font info for 52 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  75i,6n,79p,356b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on homework1_report.pdf (8 pages, 281100 bytes).
+Output written on homework1_report.pdf (11 pages, 465321 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -24,15 +24,15 @@ def normalize_tokens(tokens, lowercase=False, stem=False, lemmatize=False, remov
     
     if remove_stopwords:
         stop_words = set(stopwords.words('english'))
-        processed_tokens = [token for token in tokens if token.lower() not in stop_words]
+        processed_tokens = [token for token in processed_tokens if token.lower() not in stop_words]
     
     if stem:
         stemmer = PorterStemmer()
-        processed_tokens = [stemmer.stem(token) for token in tokens]
+        processed_tokens = [stemmer.stem(token) for token in processed_tokens]
     
     if lemmatize:
         lemmatizer = WordNetLemmatizer()
-        processed_tokens = [lemmatizer.lemmatize(token) for token in tokens]
+        processed_tokens = [lemmatizer.lemmatize(token) for token in processed_tokens]
 
     if remove_numbers:
         processed_tokens = [token for token in processed_tokens if not re.match(r'^\d+$', token)]
@@ -56,7 +56,7 @@ def visualize(word_counts, output_file='token_distribution.png'):
     #dfi.export(df_last_25, 'df_last25.png')
 
     plt.figure(figsize=(12,6))
-    ax = df.head(45).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
+    ax = df.head(40).plot(kind='bar', x='Tokens', y='Count', legend=False, ax=plt.gca())
     #plt.loglog(df['Rank'], df['Count'])
     plt.title('Token Frequency Distribution')
     plt.xlabel('Rank')

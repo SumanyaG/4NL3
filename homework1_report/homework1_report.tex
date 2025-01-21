@@ -96,8 +96,10 @@ additional time and effort.
 Using the \texttt{pandas} library and the DataFrame structure, a table has been created to sort 
 the list of unique tokens in decreasing order along with their frequency/count.\\
 
-Figure \ref{fig:FigTop25} displays a table showing the top 25 words and their frequency based on 
-the program's output.
+Figures \ref{fig:FigTop25} and \ref{fig:FigTop25Stop} display tables showing the top 25 words and
+their frequency based on the program's output. Figure \ref{fig:FigTop25} has been generated using 
+all options except \texttt{--stem} and figure \ref{fig:FigTop25Stop} has been generated using only 
+the \texttt{--lowercase} and \texttt{--lemmatize} options.
 
 \begin{figure}[H]
     \centering
@@ -106,8 +108,17 @@ the program's output.
     \label{fig:FigTop25}
 \end{figure}
 
-Similarly, \ref{fig:FigLast25} displays a table showing the last 25 words and their frequency based
-on the program's output.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.27\textwidth]{figures/df_top25_stopwords.png}
+    \caption{Top 25 (including stopwords) words with their count.}
+    \label{fig:FigTop25Stop}
+\end{figure}
+
+Figures \ref{fig:FigLast25} and \ref{fig:FigLast25Stop} display tables showing the last 25 words and
+their frequency based on the program's output. Figure \ref{fig:FigLast25} has been generated using 
+all options except \texttt{--stem} and figure \ref{fig:FigLast25Stop} has been generated using only 
+the \texttt{--lowercase} and \texttt{--lemmatize} options.
 
 \begin{figure}[H]
     \centering
@@ -116,10 +127,18 @@ on the program's output.
     \label{fig:FigLast25}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\textwidth]{figures/df_last25_stopwords.png}
+    \caption{Last 25 words (inclduing stopwords) with their count.}
+    \label{fig:FigLast25Stop}
+\end{figure}
+
 Using the \texttt{matplotlib.pyploy} library, a bar graph depicted in figure \ref{fig:FigBar} shows 
-the top 45 words. It must be noted that the y-axis has been set to a log scale to better understand
+the top 40 words. It must be noted that the y-axis has been set to a log scale to better understand
 the generated output. Although a normal bar plot without a log scale did produce a readable graph,
-the difference between frequencies was not as apparent.
+the difference between frequencies was not as apparent. This graph was generated using all 
+options except \texttt{--stem}.
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{figures/bar_plot.png}
@@ -128,17 +147,53 @@ the difference between frequencies was not as apparent.
 \end{figure}
 
 To better compare the output with Zipf's Law, a line graph as shown in figure \ref{fig:FigLine} has 
-been generated. It must be noted that this is a log-log plot.
+been generated. It must be noted that this is a log-log plot. This graph was generated using all 
+options except \texttt{--stem}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/line_plot.png}
-    \caption{Last 25 words with their count.}
+    \caption{Line plot showing the words and their frequencies.}
     \label{fig:FigLine}
 \end{figure}
 
 \section{Discussion}
+This section outlines common findings and insights dervided from the program.
 \subsection{Findings}
+On comparsion of the two bar graphs shown in figures \ref{fig:FigBar} and \ref{fig:FigBarStop}, it 
+can be noticed that prior to removing stopwords, all top 40 words consist of stopwords. Once this 
+normalization step has been implemented, however, words truly depicting the contents of the speech 
+start populating the top 40 ranks. The other end of the list, in both the figures \ref{fig:FigLast25}
+and \ref{fig:FigLast25Stop} show similar words but with different ranks as the list progresses.\\
+
+To better compare my reuslts with those mentioned in the article, I generated line plots shown in 
+figures \ref{fig:FigLine} and \ref{fig:FigLineStop}. Figure \ref{fig:FigLineStop} is very similar 
+to the plots shown in the article and the similarity can be explained by the fact that this list 
+inclduing stopwords complies with Zipf's Law. Figure \ref{fig:FigLine} however looks somewhat different 
+as all stopwords have been reduced thereby removing the compliance with Zipf's Law.\\
+
+As mentioned earlier, this means that removing stopwords significantly reduces the total number of 
+tokens because they tend to occur frequently. In contrast, removing content words has a smaller
+impact on token counts but affects the semantic richness of the text more, as content words carry meaning.
+
 \subsection{Reflection}
+
+\section{Appendix}
+This section icnludes extra figures that might be relevant to the report but have not been referenced 
+in the content.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{figures/bar_plot_stopwords.png}
+    \caption{Bar plot showing the frequencies of top 40 words (including stopwords).}
+    \label{fig:FigBarStop}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/line_plot_stopwords.png}
+    \caption{Line plot showing the words (including stopwords) and their frequencies.}
+    \label{fig:FigLineStop}
+\end{figure}
+
 
 \end{document}

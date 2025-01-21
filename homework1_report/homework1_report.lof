@@ -1,4 +1,8 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Top 25 words with their count.}}{4}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Last 25 words with their count.}}{5}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Bar plot showing the frequencies of top 45 words.}}{6}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Last 25 words with their count.}}{7}{figure.4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Top 25 (including stopwords) words with their count.}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Last 25 words with their count.}}{6}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Last 25 words (inclduing stopwords) with their count.}}{7}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Bar plot showing the frequencies of top 45 words.}}{8}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Line plot showing the words and their frequencies.}}{9}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Bar plot showing the frequencies of top 40 words (including stopwords).}}{10}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Line plot showing the words (including stopwords) and their frequencies.}}{10}{figure.8}%
