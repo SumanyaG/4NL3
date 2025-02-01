@@ -1,8 +1,8 @@
-PWD /Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report
+PWD /Users/sg/Desktop/courses/winter-2025/4nl3/assignments/assignment-1/homework1_report
 INPUT /usr/local/texlive/2024basic/texmf.cnf
 INPUT /usr/local/texlive/2024basic/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024basic/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex
+INPUT /Users/sg/Desktop/courses/winter-2025/4nl3/assignments/assignment-1/homework1_report/homework1_report.tex
 OUTPUT homework1_report.log
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/base/article.cls

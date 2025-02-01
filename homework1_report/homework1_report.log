@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.12)  20 JAN 2025 23:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.12)  1 FEB 2025 06:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex
-(/Users/sg/Desktop/courses/winter-2025/4nl3/homework-assignment-1-SumanyaG-main/homework1_report/homework1_report.tex
+**/Users/sg/Desktop/courses/winter-2025/4nl3/assignments/assignment-1/homework1_report/homework1_report.tex
+(/Users/sg/Desktop/courses/winter-2025/4nl3/assignments/assignment-1/homework1_report/homework1_report.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/base/article.cls
@@ -451,12 +451,12 @@ Package rerunfilecheck Info: File `homework1_report.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  9134 strings out of 474669
- 143938 string characters out of 5751131
+ 143905 string characters out of 5751131
  547561 words of memory out of 5000000
  32042 multiletter control sequences out of 15000+600000
  563606 words of font info for 52 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,6n,79p,356b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,345b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on homework1_report.pdf (12 pages, 466733 bytes).
 PDF statistics:
